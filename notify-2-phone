@@ -1,0 +1,5 @@
+import subprocess
+
+def send_notification(message,channel=PI,IP="xxx.xxx.xxx.xxx",port=80):
+    subprocess.call(f"curl -d {message} {IP}:{port}/{channel}", shell=True)
+    
